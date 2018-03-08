@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Googlemancy</title>
+		<meta name="description" content="Googlemancy" />
+		<meta name="keywords" content="Googlemancy by Lin Zhang" />
+		<meta name="author" content="" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Astloch|Khand|Lato" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/googlemancy.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>Googlemancy</h1>
+				<div class="header-border">
+					<h6>Guidance from the new god</h6>
+				</div>
+				<div class="clear"></div>
+					<p>
+					</p>
+			</header>
+
+			<section>
+				<form id="theForm" class="simform" autocomplete="off">
+					<span class="answer"></span>
+					<div class="simform-inner">
+						<ol class="questions">
+							<li>
+								<span><label for="q1">What is your question?</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q2">When is your birthday?</label></span>
+								<input id="q2" name="q2" type="number"/>
+							</li>
+						</ol><!-- /questions -->
+						<button class="submit" type="submit">Send answers</button>
+						<div class="controls">
+							<button class="next"></button>
+							<div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+							<span class="error-message"></span>
+						</div><!-- / controls -->
+					</div><!-- /simform-inner -->
+					<span class="final-message"></span>
+				</form><!-- /simform -->
+			</section>
+			<section id="answer">
+			</section>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/stepsForm.js"></script>
+	</body>
+</html>
