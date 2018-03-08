@@ -56,13 +56,20 @@ function getSearchResults(q){
       if (request.status >= 200 && request.status < 400){
         data = JSON.parse(request.responseText);
         console.log(data);
-
+        var s = Math.floor(Math.random()*10);
+        var item;
         var ansEle = document.getElementsByClassName( 'answer' )[0];
-        for (var i = 0; i < data.items.length; i++) {
-           var item = data.items[i];
-           // in production code, item.htmlTitle should have the HTML entities escaped.
-           ansEle.innerHTML += "<br>" + item.htmlTitle;
-        }
+
+        // for (var i = 0; i < data.items.length; i++) {
+        //   if(i == s)
+        //   {
+        //     item = data.items[i];
+        //     break;
+        //   }
+        //    // in production code, item.htmlTitle should have the HTML entities escaped.
+        // }
+
+        ansEle.innerHTML = '<a href="'+data.items[s].link+'">'+data.items[s].htmlTitle+'</a>';
         classie.addClass( ansEle, 'show' );
       } else {
         console.log('reached google API, but API returned an error');

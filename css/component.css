@@ -294,6 +294,7 @@
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
 	transition: opacity 0.3s, visibility 0s 0.3s;
+	pointer-events: none;
 }
 
 /* No JS Fallback */
