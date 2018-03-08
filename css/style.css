@@ -1,0 +1,33 @@
+.clear{
+  clear: both;
+}
+.container{
+  margin: 0 auto;
+  text-align: center;
+}
+.header-border {
+  margin: 0 40.5%;
+  display: block;
+}
+.header-border h6 {
+  border: 1px #343737 solid;
+  padding: 3px 15px 0 15px;
+  display: block;
+  /* color: #343737; */
+  color: #9c8337;
+  font-size: 1rem;
+  float: left;
+}
+.header-border:before, .header-border:after {
+    float: left;
+    color: #343737;
+}
+.header-border:before {
+    content: "";
+}
+.header-border:after {
+    content: "";
+}
+.response{
+  font-family: 'Lato';
+}
