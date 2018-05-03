@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', init());
 * and list of words
 *
 */
-
 function init(){
   // loadJSON(function(data){
   //     console.log(data);
