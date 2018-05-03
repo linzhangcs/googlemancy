@@ -19,7 +19,6 @@ window.onload = function(){
     intro.classList.add('hide');
     formdiv.classList.add('show');
   }, false);
-
   document.querySelector('.answer').addEventListener('click', function (event) {
     if (event.target.classList.contains('bubbly-button')) {
       // Do something
@@ -102,7 +101,6 @@ function getSearchResults(q){
           ansEle.innerHTML = "<p>Focus your energy and workship Google harder to get an answer.</p><button class='bubbly-button' id='restart'>Try again</button>";
           console.log("Can’t access " + url + " response. Blocked by browser?");
         });
-
         classie.addClass( ansEle, 'show' );
 
       } else {
@@ -124,7 +122,7 @@ function getSearchResults(q){
 function parseSentencs(t){
   let doc = nlp(t);
   let pos = {};
-  let p = ["he", "she", "it", "my", "", "i", "me", "her", "him", "we", "our", "ours", "their", "its", "the", "this", "that", "but", "doesnt"];
+  let p = ["he", "she", "it", "my", "", "i", "me", "her", "him", "we", "our", "ours", "their", "its", "the", "this", "that", "but"];
 
   var nouns = doc.sentences().match('#Noun').out('text').toLowerCase().replace(/\s+/g, ',').split(',');
   nouns = nouns.filter((v, i, a) => a.indexOf(v) === i);
@@ -194,8 +192,9 @@ function generateAnswer(htmltext){
       for(var key in this.languageParts) temp[key] = this.languageParts[key];
       for(var key in partsOfSpeech) temp[key] = partsOfSpeech[key];
       this.languageParts = temp;
-      //Replace adjectives,
-      console.log("languageParts: "+this.languageParts);
+      console.log("languageParts nouns: "+this.languageParts.noun);
+      console.log("languageParts verbs: "+this.languageParts.verb);
+      console.log("languageParts adjective: "+this.languageParts.adjective);
     },
     init: function() {
       this.numSentencePatterns = this.sentencePatterns.length;
@@ -256,7 +255,7 @@ function generateAnswer(htmltext){
   pg.init();
   pg.setLanguageParts(partsOfSpeech);
   var poem = pg.generateSentences(8, "<p>", "</p>");
-  console.log("Let's read some fancy ass poem: "+ poem);
+  console.log("Let's read the poem: "+ poem);
 
   return poem;
 }

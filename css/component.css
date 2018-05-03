@@ -250,7 +250,7 @@
 /* Error and final message */
 .simform .error-message,
 .simform .final-message,
-.simform .answer, .ask-form{
+.simform .answer, .ask-form, .loader{
 	position: absolute;
 	visibility: hidden;
 	opacity: 0;
@@ -279,7 +279,7 @@
 
 .error-message.show,
 .final-message.show,
-.answer.show, .ask-form.show {
+.answer.show, .ask-form.show, .loader.show {
 	visibility: visible;
 	opacity: 1;
 }
