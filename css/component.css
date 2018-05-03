@@ -250,12 +250,13 @@
 /* Error and final message */
 .simform .error-message,
 .simform .final-message,
-.simform .answer{
+.simform .answer, .ask-form{
 	position: absolute;
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: opacity 0.4s;
 	transition: opacity 0.4s;
+	width: 100%;
 }
 
 .simform .error-message {
@@ -278,9 +279,13 @@
 
 .error-message.show,
 .final-message.show,
-.answer.show {
+.answer.show, .ask-form.show {
 	visibility: visible;
 	opacity: 1;
+}
+.ask-form.show{
+	position: absolute;
+	top: 420px;
 }
 
 .final-message.show{
@@ -289,12 +294,15 @@
 }
 
 /* Final hiding of form / showing message */
-.simform-inner.hide {
+.simform-inner.hide, .intro-text.hide {
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
 	transition: opacity 0.3s, visibility 0s 0.3s;
 	pointer-events: none;
+}
+.intro-text.hide{
+
 }
 
 /* No JS Fallback */
