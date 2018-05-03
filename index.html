@@ -9,20 +9,13 @@
 		<meta name="keywords" content="Googlemancy by Lin Zhang" />
 		<meta name="author" content="" />
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Astloch|Khand|Lato|Abel" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Astloch|Khand|Abel" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
-		<script>
-  var doc = nlp('dinosaur')
-
-  var str = doc.nouns().toPlural().out('text')
-  console.log(str)
-  // 'dinosaurs'
-</script>
 		<script src="js/googlemancy.js"></script>
 	</head>
 	<body>
@@ -58,7 +51,7 @@
 
 			<section class='ask-form'>
 				<form id="theForm" class="simform" autocomplete="off">
-					<span class="answer"></span>
+					<div class="answer"></div>
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>

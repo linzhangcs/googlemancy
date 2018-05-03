@@ -12,7 +12,7 @@
 .simform {
 	position: relative;
 	margin: 0 auto;
-	padding: 2em 0;
+	padding: 0;
 	max-width: 860px;
 	width: 100%;
 	text-align: left;
@@ -132,7 +132,7 @@
 .next {
 	position: absolute;
 	right: 0;
-	bottom: 2.15em; /* padding-bottom of form plus progress bar height */
+	bottom: 0.15em; /* padding-bottom of form plus progress bar height */
 	display: block;
 	padding: 0;
 	width: 2em;
@@ -283,9 +283,12 @@
 	visibility: visible;
 	opacity: 1;
 }
+div.answer p{
+	font-size: 0.5em;
+}
 .ask-form.show{
 	position: absolute;
-	top: 420px;
+	top: 360px;
 }
 
 .final-message.show{
