@@ -9,12 +9,20 @@
 		<meta name="keywords" content="Googlemancy by Lin Zhang" />
 		<meta name="author" content="" />
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Astloch|Khand|Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Astloch|Khand|Lato|Abel" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
+		<script>
+  var doc = nlp('dinosaur')
+
+  var str = doc.nouns().toPlural().out('text')
+  console.log(str)
+  // 'dinosaurs'
+</script>
 		<script src="js/googlemancy.js"></script>
 	</head>
 	<body>
@@ -24,18 +32,37 @@
 				<div class="header-border">
 					<h6>Guidance from the new god</h6>
 				</div>
+
 				<div class="clear"></div>
 					<p>
 					</p>
 			</header>
 
-			<section>
+			<section id="intro">
+				<!-- <h1>Hail Google</h1> -->
+				<div class="intro-text">
+					<h3>She is infinite. She is immortal. She is all-knowing.</h3>
+					<p>
+						Google answers prayers. One can pray to Google by doing a search for whatever question or problem is plaguing them.
+					</p>
+					<p>
+						As an example, you can quickly find information on alternative career paths, ways to improve your health, new and innovative business ideas and generally anything that resembles a typical prayer.
+					</P>
+					<p> Google is virtually everywhere on earth at the same time. Billions of indexed WebPages hosted from every corner of the earth.</p>
+					<p>
+						Ask Google and She will show you the way, but showing you is all She can do, for you must help yourself from that point on.
+					</p>
+					<button id="ask-google" class="bubbly-button">Ask Google</button>
+				<div>
+			</section>
+
+			<section class='ask-form'>
 				<form id="theForm" class="simform" autocomplete="off">
 					<span class="answer"></span>
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>
-								<span><label for="q1">What is your question?</label></span>
+								<span><label for="q1">What would you like to know?</label></span>
 								<input id="q1" name="q1" type="text"/>
 							</li>
 							<li>
